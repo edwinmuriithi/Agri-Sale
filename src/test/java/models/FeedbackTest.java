@@ -59,6 +59,14 @@ class FeedbackTest {
         assertEquals("thanks", testFeedback.getMessage());
     }
 
+    @Test
+    @DisplayName("Compare objects")
+    public void returnTrueIfObjectsAreTheSame_true() {
+        Feedback testFeedback = setUpFeedback();
+        Feedback testFeedback2 = setUpFeedback();
+        assertTrue(testFeedback.equals(testFeedback2));
+    }
+
 
     //helper method.
     private Feedback setUpFeedback() {

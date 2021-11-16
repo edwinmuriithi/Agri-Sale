@@ -77,11 +77,12 @@ class ProductsTest {
 
     @Test
     @DisplayName("Compare objects")
-    public void returnTrueIfNameAndTypeAreTheSame_true() {
-        Products testAnimal = setUpProducts();
-        Products testAnimal2 = setUpProducts();
-        assertTrue(testAnimal.equals(testAnimal2));
+    public void returnTrueIfObjectsAreTheSame_true() {
+        Products testProducts = setUpProducts();
+        Products testProducts2 = setUpProducts();
+        assertTrue(testProducts.equals(testProducts2));
     }
+
 
 
     //helper method.
