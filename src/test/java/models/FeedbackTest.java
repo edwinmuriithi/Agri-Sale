@@ -43,6 +43,22 @@ class FeedbackTest {
         assertEquals(1, testFeedback.getId());
     }
 
+    @Test
+    @DisplayName("Feedback Correctly sets name to admin.")
+    public void setName_SetsName_admin(){
+        Feedback testFeedback = setUpFeedback();
+        testFeedback.setName("admin");
+        assertEquals("admin", testFeedback.getName());
+    }
+
+    @Test
+    @DisplayName("Feedback Correctly sets message to thanks.")
+    public void setMessage_SetsMessage_thanks(){
+        Feedback testFeedback = setUpFeedback();
+        testFeedback.setMessage("thanks");
+        assertEquals("thanks", testFeedback.getMessage());
+    }
+
 
     //helper method.
     private Feedback setUpFeedback() {
