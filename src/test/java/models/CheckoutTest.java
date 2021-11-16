@@ -45,6 +45,14 @@ class CheckoutTest {
         assertEquals(2, testCheckout.getPrice());
     }
 
+    @Test
+    @DisplayName("Checkout sets the Id to 2.")
+    public void setId_setsIdTo_2() {
+        Checkout testCheckout = setUpCheckOut();
+        testCheckout.setId(2);
+        assertEquals(2, testCheckout.getId());
+    }
+
 
 
 
