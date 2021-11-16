@@ -15,6 +15,12 @@ class ProductsTest {
         assertEquals(true, testProducts instanceof Products);
     }
 
+    @Test
+    @DisplayName("Products Instantiates Correctly with id 1.")
+    public void testInstanceWithId_1(){
+        Products testProducts = setUpProducts();
+        assertEquals(1, testProducts.getId());
+    }
 
 
 
