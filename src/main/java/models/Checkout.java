@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Objects;
+
 public class Checkout {
     private int id;
     private String name_of_item;
@@ -45,5 +47,18 @@ public class Checkout {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Checkout)) return false;
+        Checkout checkout = (Checkout) o;
+        return getId() == checkout.getId() && price_of_item == checkout.price_of_item && getPrice() == checkout.getPrice() && name_of_item.equals(checkout.name_of_item);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), name_of_item, price_of_item, getPrice());
     }
 }
