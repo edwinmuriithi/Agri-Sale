@@ -31,6 +31,10 @@ public class Products {
         return price;
     }
 
-
     //setters
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
 }

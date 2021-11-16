@@ -43,6 +43,14 @@ class ProductsTest {
         assertEquals(2, testProducts.getPrice());
     }
 
+    @Test
+    @DisplayName("Checkout sets the Id to 2.")
+    public void setId_setsIdTo_2() {
+        Products testProducts = setUpProducts();
+        testProducts.setId(2);
+        assertEquals(2, testProducts.getId());
+    }
+
     //helper method.
     private Products setUpProducts() {
         return new Products (1, "product", "category", 2);
