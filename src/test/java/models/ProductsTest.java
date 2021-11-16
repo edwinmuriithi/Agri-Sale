@@ -23,7 +23,7 @@ class ProductsTest {
     }
 
     @Test
-    @DisplayName("Products Instantiates Correctly with name product.")
+    @DisplayName("Products Instantiates Correctly with name product .")
     public void testInstanceWithName_product(){
         Products testProducts = setUpProducts();
         assertEquals("product", testProducts.getName());
