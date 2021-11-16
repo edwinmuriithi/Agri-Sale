@@ -38,4 +38,8 @@ public class Checkout {
     public void setNameOfItem(String name_of_item) {
         this.name_of_item = name_of_item;
     }
+
+    public void setPriceOfItem(int price_of_item) {
+        this.price_of_item = price_of_item;
+    }
 }
