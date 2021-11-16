@@ -67,6 +67,15 @@ class ProductsTest {
         assertEquals("new", testProducts.getCategory());
     }
 
+    @Test
+    @DisplayName("Products sets the price to 1.")
+    public void setPrice_setsPrice_1() {
+        Products testProducts = setUpProducts();
+        testProducts.setPrice(1);
+        assertEquals(1, testProducts.getPrice());
+    }
+
+
     //helper method.
     private Products setUpProducts() {
         return new Products (1, "product", "category", 2);
