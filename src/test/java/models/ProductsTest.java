@@ -36,7 +36,12 @@ class ProductsTest {
         assertEquals("category", testProducts.getCategory());
     }
 
-
+    @Test
+    @DisplayName("Products Instantiates Correctly with price 2.")
+    public void testInstanceWithPrice_2(){
+        Products testProducts = setUpProducts();
+        assertEquals(2, testProducts.getPrice());
+    }
 
     //helper method.
     private Products setUpProducts() {

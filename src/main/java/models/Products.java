@@ -27,6 +27,10 @@ public class Products {
         return category;
     }
 
+    public int getPrice() {
+        return price;
+    }
+
 
     //setters
 }
