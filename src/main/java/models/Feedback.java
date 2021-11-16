@@ -18,5 +18,9 @@ public class Feedback {
         return id;
     }
 
+    public String getName() {
+        return name;
+    }
+
     //setters
 }

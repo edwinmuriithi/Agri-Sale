@@ -16,9 +16,16 @@ class FeedbackTest {
 
     @Test
     @DisplayName("Feedback Instantiates Correctly with id 1.")
-    public void testInstanceOfFeedback_1(){
+    public void getId_ReturnsId_1(){
         Feedback testFeedback = setUpFeedback();
         assertEquals(1, testFeedback.getId());
+    }
+
+    @Test
+    @DisplayName("Feedback Instantiates Correctly with name.")
+    public void getName_ReturnsName_user(){
+        Feedback testFeedback = setUpFeedback();
+        assertEquals("user", testFeedback.getName());
     }
 
 
