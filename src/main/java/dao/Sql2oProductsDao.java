@@ -30,4 +30,12 @@ public class Sql2oProductsDao implements ProductsDao {
         }
     }
 
+    @Override
+    public List<Products> getAll() {
+        try(Connection con =sql2o.open()){
+            return con.createQuery("SELECT * FROM products")
+                    .executeAndFetch(Products.class);
+        }
+    }
+
 }
