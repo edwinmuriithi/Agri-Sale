@@ -77,6 +77,14 @@ class CheckoutTest {
         assertEquals(1, testCheckout.getPrice());
     }
 
+    @Test
+    @DisplayName("Compare objects")
+    public void returnTrueIfNameAndTypeAreTheSame_true() {
+        Checkout testCheckout = setUpCheckOut();
+        Checkout testCheckout2 = setUpCheckOut();
+        assertTrue(testCheckout.equals(testCheckout2));
+    }
+
 
 
     //helper method.
