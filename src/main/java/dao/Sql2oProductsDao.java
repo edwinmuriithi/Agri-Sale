@@ -47,4 +47,20 @@ public class Sql2oProductsDao implements ProductsDao {
         }
     }
 
+    @Override
+    public void update(int id, String name, String category, int price) {
+        String sql = "UPDATE products SET(name, category, price) = (:name, :category, :price) WHERE id=:id";
+        try (Connection con = sql2o.open()){
+            con.createQuery(sql)
+                    .addParameter("name",name)
+                    .addParameter("category",category)
+                    .addParameter("price",price)
+                    .addParameter("id",id)
+                    .executeUpdate();
+        }catch (Sql2oException ex){
+            System.out.println(ex);
+        }
+
+    }
+
 }
