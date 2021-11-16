@@ -20,4 +20,8 @@ public class Checkout {
     public int getPriceOfItem() {
         return price_of_item;
     }
+
+    public int getPrice() {
+        return price;
+    }
 }

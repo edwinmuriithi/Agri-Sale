@@ -38,6 +38,12 @@ class CheckoutTest {
         assertEquals(1, testCheckout.getPriceOfItem());
     }
 
+    @Test
+    @DisplayName("Checkout Instantiates Correctly with price 2.")
+    public void testInstanceWithPrice_2(){
+        Checkout testCheckout = setUpCheckOut();
+        assertEquals(2, testCheckout.getPrice());
+    }
 
 
 
