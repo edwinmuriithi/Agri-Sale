@@ -10,8 +10,7 @@ price int
 
 CREATE TABLE checkout (
 id SERIAL PRIMARY KEY,
-item_name VARCHAR,
-item_price INT
+product_id INT
 );
 
 CREATE TABLE feedback (
