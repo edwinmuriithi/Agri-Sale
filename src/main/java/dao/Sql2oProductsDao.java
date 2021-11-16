@@ -38,4 +38,13 @@ public class Sql2oProductsDao implements ProductsDao {
         }
     }
 
+    @Override
+    public Products findById(int id) {
+        try(Connection con = sql2o.open()){
+            return con.createQuery("SELECT * FROM products WHERE id = :id")
+                    .addParameter("id",id)
+                    .executeAndFetchFirst(Products.class);
+        }
+    }
+
 }
