@@ -35,5 +35,7 @@ public class Checkout {
         this.id = id;
     }
 
-
+    public void setNameOfItem(String name_of_item) {
+        this.name_of_item = name_of_item;
+    }
 }

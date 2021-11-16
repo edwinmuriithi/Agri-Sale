@@ -53,6 +53,13 @@ class CheckoutTest {
         assertEquals(2, testCheckout.getId());
     }
 
+    @Test
+    @DisplayName("Checkout sets the name_of_item to tomato.")
+    public void setNameOfItem_setsNameOfItem_tomato() {
+        Checkout testCheckout = setUpCheckOut();
+        testCheckout.setNameOfItem("tomato");
+        assertEquals("tomato", testCheckout.getNameOfItem());
+    }
 
 
 
