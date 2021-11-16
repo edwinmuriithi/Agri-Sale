@@ -69,7 +69,13 @@ class CheckoutTest {
         assertEquals(2, testCheckout.getPriceOfItem());
     }
 
-
+    @Test
+    @DisplayName("Checkout sets the price to 1.")
+    public void setPrice_setsPrice_1() {
+        Checkout testCheckout = setUpCheckOut();
+        testCheckout.setPrice(1);
+        assertEquals(1, testCheckout.getPrice());
+    }
 
 
 

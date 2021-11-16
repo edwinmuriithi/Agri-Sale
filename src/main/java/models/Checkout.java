@@ -42,4 +42,8 @@ public class Checkout {
     public void setPriceOfItem(int price_of_item) {
         this.price_of_item = price_of_item;
     }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 }
