@@ -1,10 +1,10 @@
 package models;
 
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ProductsTest {
 
@@ -73,6 +73,14 @@ class ProductsTest {
         Products testProducts = setUpProducts();
         testProducts.setPrice(1);
         assertEquals(1, testProducts.getPrice());
+    }
+
+    @Test
+    @DisplayName("Compare objects")
+    public void returnTrueIfNameAndTypeAreTheSame_true() {
+        Products testAnimal = setUpProducts();
+        Products testAnimal2 = setUpProducts();
+        assertTrue(testAnimal.equals(testAnimal2));
     }
 
 
