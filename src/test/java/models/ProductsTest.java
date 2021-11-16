@@ -44,11 +44,19 @@ class ProductsTest {
     }
 
     @Test
-    @DisplayName("Checkout sets the Id to 2.")
+    @DisplayName("Products sets the Id to 2.")
     public void setId_setsIdTo_2() {
         Products testProducts = setUpProducts();
         testProducts.setId(2);
         assertEquals(2, testProducts.getId());
+    }
+
+    @Test
+    @DisplayName("Products sets the name to another.")
+    public void setName_setsName_another() {
+        Products testProducts = setUpProducts();
+        testProducts.setName("another");
+        assertEquals("another", testProducts.getName());
     }
 
     //helper method.
