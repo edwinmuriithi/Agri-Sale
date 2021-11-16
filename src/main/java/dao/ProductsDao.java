@@ -17,8 +17,10 @@ public interface ProductsDao{
     //update
     void update(int id, String name, String category, int price);
 
-    //delete
+    //delete a single product
     void deleteById(int id);
+
+    //delete all products
     void clearAll();
 }
 
