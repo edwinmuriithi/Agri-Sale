@@ -5,4 +5,8 @@ public class Products {
     private String name;
     private String category;
     private int price;
+
+    public Products(int id, String name, String category, int price) {
+
+    }
 }

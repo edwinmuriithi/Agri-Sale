@@ -3,6 +3,7 @@ package models;
 import java.util.Objects;
 
 public class Checkout {
+
     private int id;
     private String name_of_item;
     private int price_of_item;
@@ -61,4 +62,5 @@ public class Checkout {
     public int hashCode() {
         return Objects.hash(getId(), name_of_item, price_of_item, getPrice());
     }
+
 }
