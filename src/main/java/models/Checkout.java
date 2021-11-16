@@ -16,4 +16,8 @@ public class Checkout {
     public String getNameOfItem() {
         return name_of_item;
     }
+
+    public int getPriceOfItem() {
+        return price_of_item;
+    }
 }
