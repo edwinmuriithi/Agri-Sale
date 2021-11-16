@@ -59,6 +59,14 @@ class ProductsTest {
         assertEquals("another", testProducts.getName());
     }
 
+    @Test
+    @DisplayName("Products sets the category to new.")
+    public void setCategory_setsCategory_another() {
+        Products testProducts = setUpProducts();
+        testProducts.setCategory("new");
+        assertEquals("new", testProducts.getCategory());
+    }
+
     //helper method.
     private Products setUpProducts() {
         return new Products (1, "product", "category", 2);

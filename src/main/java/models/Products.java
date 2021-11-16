@@ -39,4 +39,8 @@ public class Products {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 }
