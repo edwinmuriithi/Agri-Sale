@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Objects;
+
 public class Products {
     private int id;
     private String name;
@@ -46,5 +48,18 @@ public class Products {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Products)) return false;
+        Products products = (Products) o;
+        return getId() == products.getId() && getPrice() == products.getPrice() && getName().equals(products.getName()) && getCategory().equals(products.getCategory());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getCategory(), getPrice());
     }
 }
