@@ -63,4 +63,17 @@ public class Sql2oProductsDao implements ProductsDao {
 
     }
 
+    @Override
+    public void deleteById(int id) {
+        String sql =" DELETE from products WHERE id = :id";
+        try (Connection con = sql2o.open()){
+            con.createQuery(sql)
+                    .addParameter("id",id)
+                    .executeUpdate();
+        } catch (Sql2oException ex){
+            System.out.println(ex);
+        }
+
+    }
+
 }
