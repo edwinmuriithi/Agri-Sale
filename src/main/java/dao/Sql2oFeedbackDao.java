@@ -1,6 +1,7 @@
 package dao;
 
 import models.Feedback;
+import org.sql2o.Sql2o;
 
 import java.sql.Connection;
 import java.util.List;
@@ -15,7 +16,7 @@ public class Sql2oFeedbackDao implements FeedbackDao{
     public List<Feedback> getAllFeedbacks(){
         String sql = "SELECT * FROM feedback";
         try(Connection con = sql2o.open()){
-            return con.createQuery(sql).executeAndFetch(Feedback.class);
+            return ((org.sql2o.Connection) con).createQuery(sql).executeAndFetch(Feedback.class);
         }
     }
 
