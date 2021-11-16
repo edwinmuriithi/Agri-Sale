@@ -22,6 +22,20 @@ class ProductsTest {
         assertEquals(1, testProducts.getId());
     }
 
+    @Test
+    @DisplayName("Products Instantiates Correctly with name product.")
+    public void testInstanceWithName_product(){
+        Products testProducts = setUpProducts();
+        assertEquals("product", testProducts.getName());
+    }
+
+    @Test
+    @DisplayName("Products Instantiates Correctly with category.")
+    public void testInstanceWithCategory_category(){
+        Products testProducts = setUpProducts();
+        assertEquals("category", testProducts.getCategory());
+    }
+
 
 
     //helper method.

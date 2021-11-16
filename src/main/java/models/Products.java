@@ -19,6 +19,14 @@ public class Products {
         return id;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
 
     //setters
 }
