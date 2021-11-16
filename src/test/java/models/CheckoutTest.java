@@ -19,10 +19,23 @@ class CheckoutTest {
 
     @Test
     @DisplayName("Checkout Instantiates Correctly.")
-    public void testInstanceOfAnimal_true(){
+    public void testInstanceOfCheckout_true(){
         Checkout testCheckout = setUpCheckOut();
         assertEquals(true, testCheckout instanceof Checkout);
     }
+
+    @Test
+    @DisplayName("Checkout Instantiates Correctly with name_of_item Potato.")
+    public void testInstanceWithNameOfItem_potato(){
+        Checkout testCheckout = setUpCheckOut();
+        assertEquals("Potato", testCheckout.getNameOfItem());
+    }
+
+
+
+
+
+
 
     //helper method.
     private Checkout setUpCheckOut() {

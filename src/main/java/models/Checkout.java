@@ -7,5 +7,13 @@ public class Checkout {
     private int price;
 
     public Checkout(String name_of_item, int price_of_item, int price) {
+        this.name_of_item = name_of_item;
+        this.price_of_item = price_of_item;
+        this.price = price;
+    }
+
+
+    public String getNameOfItem() {
+        return name_of_item;
     }
 }
