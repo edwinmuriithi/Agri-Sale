@@ -22,5 +22,9 @@ public class Feedback {
         return name;
     }
 
+    public String getMessage() {
+        return message;
+    }
+
     //setters
 }

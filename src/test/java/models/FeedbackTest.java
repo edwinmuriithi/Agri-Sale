@@ -28,6 +28,13 @@ class FeedbackTest {
         assertEquals("user", testFeedback.getName());
     }
 
+    @Test
+    @DisplayName("Feedback Instantiates Correctly with message.")
+    public void getMessage_ReturnsMessage_message(){
+        Feedback testFeedback = setUpFeedback();
+        assertEquals("message", testFeedback.getMessage());
+    }
+
 
 
 
