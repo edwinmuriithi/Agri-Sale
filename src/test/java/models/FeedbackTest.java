@@ -35,7 +35,13 @@ class FeedbackTest {
         assertEquals("message", testFeedback.getMessage());
     }
 
-
+    @Test
+    @DisplayName("Feedback Correctly sets id to 2.")
+    public void setId_SetsId_2(){
+        Feedback testFeedback = setUpFeedback();
+        testFeedback.setId(1);
+        assertEquals(1, testFeedback.getId());
+    }
 
 
     //helper method.
