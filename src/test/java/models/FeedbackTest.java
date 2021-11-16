@@ -8,10 +8,17 @@ import static org.junit.jupiter.api.Assertions.*;
 class FeedbackTest {
 
     @Test
-    @DisplayName("Checkout Instantiates Correctly.")
-    public void testInstanceOfCheckout_true(){
+    @DisplayName("Feedback Instantiates Correctly.")
+    public void testInstanceOfFeedback_true(){
         Feedback testFeedback = setUpFeedback();
         assertEquals(true, testFeedback instanceof Feedback);
+    }
+
+    @Test
+    @DisplayName("Feedback Instantiates Correctly with id 1.")
+    public void testInstanceOfFeedback_1(){
+        Feedback testFeedback = setUpFeedback();
+        assertEquals(1, testFeedback.getId());
     }
 
 

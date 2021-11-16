@@ -6,6 +6,17 @@ public class Feedback {
     private String name;
     private String message;
 
+    //constructor
     public Feedback(int id, String name, String message) {
+        this.id = id;
+        this.name = name;
+        this.message = message;
     }
+
+    //getters
+    public int getId() {
+        return id;
+    }
+
+    //setters
 }
