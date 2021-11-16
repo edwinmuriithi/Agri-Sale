@@ -44,7 +44,7 @@ class FeedbackTest {
     }
 
     @Test
-    @DisplayName("Feedback Correctly sets name to admin. ")
+    @DisplayName("Feedback Correctly sets name to admin.")
     public void setName_SetsName_admin(){
         Feedback testFeedback = setUpFeedback();
         testFeedback.setName("admin");

@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Objects;
+
 public class Feedback {
 
     private int id;
@@ -37,5 +39,18 @@ public class Feedback {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Feedback)) return false;
+        Feedback feedback = (Feedback) o;
+        return getId() == feedback.getId() && getName().equals(feedback.getName()) && getMessage().equals(feedback.getMessage());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getMessage());
     }
 }
