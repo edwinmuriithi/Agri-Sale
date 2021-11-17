@@ -70,7 +70,7 @@ class FeedbackTest {
 
     //helper method.
     private Feedback setUpFeedback() {
-        return new Feedback (1, "user", "message");
+        return new Feedback( "user", "email", "message");
     }
 
 }
