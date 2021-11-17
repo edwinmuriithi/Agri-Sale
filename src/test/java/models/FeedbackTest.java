@@ -67,7 +67,6 @@ class FeedbackTest {
         assertTrue(testFeedback.equals(testFeedback2));
     }
 
-
     //helper method.
     private Feedback setUpFeedback() {
         return new Feedback( "user", "email", "message");

@@ -78,6 +78,25 @@ public class App {
             return new ModelAndView(model, "checkout.hbs");
         }, new HandlebarsTemplateEngine());
 
+        //get: delete all products
+        get("/products/delete", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            productsDao.clearAll();
+            res.redirect("/");
+            return null;
+        }, new HandlebarsTemplateEngine());
+
+        //get: add product by id to checkout
+
+        //get: delete a product from Checkout by id
+        get("/checkout/:id/products/:product_id/delete", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            int idOfProductToDelete = Integer.parseInt(req.params("product_id"));
+            productsDao.deleteById(idOfProductToDelete);
+            res.redirect("/");
+            return null;
+        }, new HandlebarsTemplateEngine());
+
         //post
 
         //post: process a form to create a new feedback
@@ -91,8 +110,6 @@ public class App {
             res.redirect("/");
             return null;
         }, new HandlebarsTemplateEngine());
-
-
 
     }
 
