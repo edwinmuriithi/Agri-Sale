@@ -62,4 +62,5 @@ public class Products {
     public int hashCode() {
         return Objects.hash(getId(), getName(), getCategory(), getPrice());
     }
+
 }

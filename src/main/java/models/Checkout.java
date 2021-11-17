@@ -10,10 +10,9 @@ public class Checkout {
     private int price;
 
     //constructor
-    public Checkout(String name_of_item, int price_of_item, int price) {
-        this.name_of_item = name_of_item;
-        this.price_of_item = price_of_item;
+    public Checkout(int id, int product_id) {
         this.price = price;
+        this.id = id;
     }
 
     //getters

@@ -1,26 +1,24 @@
-package dao;
+package dao.interfaces;
 import models.Products;
 import models.Checkout;
 import models.Feedback;
 import java.util.List;
 
 public interface ProductsDao{
-    //add a new product
+
+    //Create
     void add(Products products);
 
-    //view all products
+    //Retrieve
     List<Products> getAll();
-
-    //view a single product
     Products findById(int id);
 
-    //update
+    //Update
     void update(int id, String name, String category, int price);
 
-    //delete a single product
+    //Delete
     void deleteById(int id);
-
-    //delete all products
     void clearAll();
+
 }
 

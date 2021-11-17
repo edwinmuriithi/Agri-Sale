@@ -1,13 +1,13 @@
 package dao;
+
+import dao.interfaces.ProductsDao;
 import models.Products;
-import models.Feedback;
-import models.Checkout;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 
-import java.util.ArrayList;
 import java.util.List;
+
 public class Sql2oProductsDao implements ProductsDao {
 
     private final Sql2o sql2o;
@@ -49,7 +49,7 @@ public class Sql2oProductsDao implements ProductsDao {
 
     @Override
     public void update(int id, String name, String category, int price) {
-        String sql = "UPDATE products SET(name, category, price) = (:name, :category, :price) WHERE id=:id";
+        String sql = "UPDATE products SET (name, category, price) = (:name, :category, :price) WHERE id=:id";
         try (Connection con = sql2o.open()){
             con.createQuery(sql)
                     .addParameter("name",name)
@@ -59,6 +59,7 @@ public class Sql2oProductsDao implements ProductsDao {
                     .executeUpdate();
         }catch (Sql2oException ex){
             System.out.println(ex);
+            System.out.println("Updated product by Id.");
         }
 
     }
@@ -72,6 +73,7 @@ public class Sql2oProductsDao implements ProductsDao {
                     .executeUpdate();
         } catch (Sql2oException ex){
             System.out.println(ex);
+            System.out.println("Deleted product by Id successfully.");
         }
 
     }
@@ -84,6 +86,7 @@ public class Sql2oProductsDao implements ProductsDao {
                     .executeUpdate();
         } catch (Sql2oException ex) {
             System.out.println(ex);
+            System.out.println("Deleted all products.");
         }
 
     }
