@@ -7,12 +7,14 @@ public class Feedback {
     private int id;
     private String name;
     private String message;
+    private String email;
 
     //constructor
-    public Feedback(int id, String name, String message) {
-        this.id = id;
+    public Feedback(String name, String email, String message) {
+
         this.name = name;
         this.message = message;
+        this.email = email;
     }
 
     //getters
@@ -27,6 +29,8 @@ public class Feedback {
     public String getMessage() {
         return message;
     }
+
+    public String getEmail(){return email;}
 
     //setters
     public void setId(int id) {
