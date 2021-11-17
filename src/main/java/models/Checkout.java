@@ -8,10 +8,11 @@ public class Checkout {
     private String name_of_item;
     private int price_of_item;
     private int price;
+    private int product_id;
 
     //constructor
     public Checkout(int id, int product_id) {
-        this.price = price;
+        this.product_id = product_id;
         this.id = id;
     }
 
@@ -32,9 +33,17 @@ public class Checkout {
         return id;
     }
 
+    public int getProduct_id() {
+        return product_id;
+    }
+
     //setters
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void setProduct_id(int product_id) {
+        this.product_id = product_id;
     }
 
     public void setNameOfItem(String name_of_item) {

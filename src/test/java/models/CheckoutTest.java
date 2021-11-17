@@ -24,7 +24,6 @@ class CheckoutTest {
         assertEquals(true, testCheckout instanceof Checkout);
     }
 
-
     @Test
     @DisplayName("Checkout Instantiates Correctly with price_of_item 1.")
     public void testInstanceWithPriceOfItem_1(){
@@ -39,6 +38,14 @@ class CheckoutTest {
         Checkout testCheckout = setUpCheckOut();
         testCheckout.setPrice(2);
         assertEquals(2, testCheckout.getPrice());
+    }
+
+    @Test
+    @DisplayName("Checkout Instantiates Correctly with product_Id 2.")
+    public void testInstanceWithProductId_2(){
+        Checkout testCheckout = setUpCheckOut();
+        testCheckout.setPrice(2);
+        assertEquals(2, testCheckout.getProduct_id());
     }
 
     @Test
@@ -72,6 +79,13 @@ class CheckoutTest {
         testCheckout.setPrice(1);
         assertEquals(1, testCheckout.getPrice());
     }
+    @Test
+    @DisplayName("Checkout sets the price to 1.")
+    public void setPrice_setsProduct_Id_1() {
+        Checkout testCheckout = setUpCheckOut();
+        testCheckout.setProduct_id(1);
+        assertEquals(1, testCheckout.getProduct_id());
+    }
 
     @Test
     @DisplayName("Compare objects")
@@ -80,8 +94,6 @@ class CheckoutTest {
         Checkout testCheckout2 = setUpCheckOut();
         assertTrue(testCheckout.equals(testCheckout2));
     }
-
-
 
     //helper method.
     private Checkout setUpCheckOut() {
