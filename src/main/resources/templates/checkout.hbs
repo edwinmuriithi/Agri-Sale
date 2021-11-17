@@ -3,14 +3,14 @@
     <div class="checkout">
         <h1>Product's Added To The Cart</h1>
         <ul class="mt-5">
-                <li ng-if="products" class="my-1" ng-repeat="products in products">
+                <li >
                     <div class="shadow p-2 bg-white">
                         <div class="card-title">{{products.id}}</div>
                         <hr>
                         <div class="card-text">{{products.name}}</div>
                         <div class="card-text">{{products.category}}</div>
                         <div class="card-text">{{products.price}}</div>
-                        <button ng-click="deleteProducts()" class="btn btn-block btn-success p-2 font-weight-bolder text-white">Delete Product</button>
+                        <button class="btn btn-block btn-success p-2 font-weight-bolder text-white">Delete Product</button>
                     </div>
                 </li>
         </ul>
