@@ -24,26 +24,22 @@ class CheckoutTest {
         assertEquals(true, testCheckout instanceof Checkout);
     }
 
-//    @Test
-//    @DisplayName("Checkout Instantiates Correctly with name_of_item Potato.")
-//    public void testInstanceWithNameOfItem_potato(){
-//        Checkout testCheckout = setUpCheckOut();
-//        assertEquals("Potato", testCheckout.getNameOfItem());
-//    }
 
-//    @Test
-//    @DisplayName("Checkout Instantiates Correctly with price_of_item 1.")
-//    public void testInstanceWithPriceOfItem_1(){
-//        Checkout testCheckout = setUpCheckOut();
-//        assertEquals(1, testCheckout.getPriceOfItem());
-//    }
+    @Test
+    @DisplayName("Checkout Instantiates Correctly with price_of_item 1.")
+    public void testInstanceWithPriceOfItem_1(){
+        Checkout testCheckout = setUpCheckOut();
+        testCheckout.setPriceOfItem(1);
+        assertEquals(1, testCheckout.getPriceOfItem());
+    }
 
-//    @Test
-//    @DisplayName("Checkout Instantiates Correctly with price 2.")
-//    public void testInstanceWithPrice_2(){
-//        Checkout testCheckout = setUpCheckOut();
-//        assertEquals(2, testCheckout.getPrice());
-//    }
+    @Test
+    @DisplayName("Checkout Instantiates Correctly with price 2.")
+    public void testInstanceWithPrice_2(){
+        Checkout testCheckout = setUpCheckOut();
+        testCheckout.setPrice(2);
+        assertEquals(2, testCheckout.getPrice());
+    }
 
     @Test
     @DisplayName("Checkout sets the Id to 2.")
@@ -77,13 +73,13 @@ class CheckoutTest {
         assertEquals(1, testCheckout.getPrice());
     }
 
-//    @Test
-//    @DisplayName("Compare objects")
-//    public void returnTrueIfNameAndTypeAreTheSame_true() {
-//        Checkout testCheckout = setUpCheckOut();
-//        Checkout testCheckout2 = setUpCheckOut();
-//        assertTrue(testCheckout.equals(testCheckout2));
-//    }
+    @Test
+    @DisplayName("Compare objects")
+    public void returnTrueIfNameAndTypeAreTheSame_true() {
+        Checkout testCheckout = setUpCheckOut();
+        Checkout testCheckout2 = setUpCheckOut();
+        assertTrue(testCheckout.equals(testCheckout2));
+    }
 
 
 

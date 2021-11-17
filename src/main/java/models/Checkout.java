@@ -54,12 +54,12 @@ public class Checkout {
         if (this == o) return true;
         if (!(o instanceof Checkout)) return false;
         Checkout checkout = (Checkout) o;
-        return getId() == checkout.getId() && price_of_item == checkout.price_of_item && getPrice() == checkout.getPrice() && name_of_item.equals(checkout.name_of_item);
+        return price_of_item == checkout.price_of_item && Objects.equals(name_of_item, checkout.name_of_item);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), name_of_item, price_of_item, getPrice());
+        return Objects.hash(name_of_item, price_of_item);
     }
 
 }
