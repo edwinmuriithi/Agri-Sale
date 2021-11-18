@@ -9,7 +9,7 @@ public class Feedback {
     private String message;
 
     //constructor
-    public Feedback(int id, String name, String message) {
+    public Feedback(String name, String email, String message) {
         this.id = id;
         this.name = name;
         this.message = message;
