@@ -36,7 +36,7 @@ public class App {
         //connect to Db.
         //Local
         String connectionString = "jdbc:postgresql://localhost:5432/agri_sale";
-        Sql2o sql2o = new Sql2o(connectionString, "moringa", "1234567890");
+        Sql2o sql2o = new Sql2o(connectionString, "moringa", "hacked");
 
         //Remote
 //        String connectionString = "jdbc:postgresql://ec2-23-21-148-223.compute-1.amazonaws.com:5432/das9arqqcn3fum";
@@ -74,10 +74,10 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
         //get: checkout
-        get("/checkout", (request, response) -> {
+         get("/checkout", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            List<Products> products = productsDao.getAll();
-            model.put("products", products);
+//            List<Products> checkoutItems = checkoutDao.getProductByproduct_id(intOfProductToFind);
+            //model.put("checkoutItems", checkoutItems);
             return new ModelAndView(model, "checkout.hbs");
         }, new HandlebarsTemplateEngine());
 
