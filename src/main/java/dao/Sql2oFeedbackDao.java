@@ -23,7 +23,7 @@ public class Sql2oFeedbackDao implements FeedbackDao {
 
     @Override
     public void addFeedback(Feedback feedback){
-        String sql = "INSERT INTO feedback (name,message) VALUES(:name, :message)";
+        String sql = "INSERT INTO feedback (name, email, message) VALUES(:name, :email, :message)";
         try(Connection con = sql2o.open()){
             int id = (int) con.createQuery(sql,true)
                     .bind(feedback)
