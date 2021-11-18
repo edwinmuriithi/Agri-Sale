@@ -7,11 +7,13 @@ public class Feedback {
     private int id;
     private String name;
     private String message;
+    private String email;
 
     //constructor
     public Feedback(String name, String email, String message) {
         this.id = id;
         this.name = name;
+        this.email = email;
         this.message = message;
     }
 
