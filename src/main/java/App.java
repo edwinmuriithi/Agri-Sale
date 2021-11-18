@@ -133,6 +133,21 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
 
+
+        get("/products", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "products.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/feedback", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "feedback.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/checkout", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "checkout.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 
 }
