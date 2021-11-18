@@ -1,0 +1,25 @@
+{{#partial "styles"}}
+    <link rel ="stylesheet" href=/css/feedback.css>
+{{/partial}}
+
+{{#partial "content"}}
+    <h3 style="text-align:center;">Have Feedback? We would like to hear from you!</h3>
+    <div class="form-align">
+        <form action="/feedback" method="post">
+
+                <br>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" class="form-control feedback-form" required>
+                <br>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" class="form-control feedback-form " required>
+                <br>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" type="text" rows= "5" class="form-control text-area" required></textarea>
+                <br>
+
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

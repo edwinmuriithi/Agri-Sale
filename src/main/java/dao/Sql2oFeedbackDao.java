@@ -1,11 +1,18 @@
 package dao;
 
+<<<<<<< HEAD
 import interfaces.FeedbackDao;
+=======
+import dao.interfaces.FeedbackDao;
+>>>>>>> f9d7b2af47804d4b1382b5cc66be6151e30c0451
 import models.Feedback;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
+<<<<<<< HEAD
 import java.sql.Connection;
+=======
+>>>>>>> f9d7b2af47804d4b1382b5cc66be6151e30c0451
 import java.util.List;
 
 public class Sql2oFeedbackDao implements FeedbackDao {
@@ -24,7 +31,11 @@ public class Sql2oFeedbackDao implements FeedbackDao {
 
     @Override
     public void addFeedback(Feedback feedback){
+<<<<<<< HEAD
         String sql = "INSERT INTO feedback (name,message) VALUES(:name, :message)";
+=======
+        String sql = "INSERT INTO feedback (name, email, message) VALUES(:name, :email, :message)";
+>>>>>>> f9d7b2af47804d4b1382b5cc66be6151e30c0451
         try(Connection con = sql2o.open()){
             int id = (int) con.createQuery(sql,true)
                     .bind(feedback)
@@ -67,4 +78,8 @@ public class Sql2oFeedbackDao implements FeedbackDao {
         }
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f9d7b2af47804d4b1382b5cc66be6151e30c0451
