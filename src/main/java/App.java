@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Map;
 import com.google.gson.Gson;
 
+import dao.Sql2oProductsDao;
 import dao.Sql2oCheckoutDao;
 import dao.Sql2oFeedbackDao;
 import dao.Sql2oProductsDao;
@@ -128,8 +129,7 @@ public class App {
             String message = req.queryParams("message");
             Feedback newFeedback = new Feedback(name, email, message);
             feedbackDao.addFeedback(newFeedback);
-            res.redirect("/");
-            return null;
+            return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
 

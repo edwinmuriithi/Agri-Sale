@@ -11,10 +11,10 @@ public class Feedback {
 
     //constructor
     public Feedback(String name, String email, String message) {
-        this.id = id;
         this.name = name;
         this.email = email;
         this.message = message;
+        this.email = email;
     }
 
     //getters
@@ -29,7 +29,7 @@ public class Feedback {
     public String getMessage() {
         return message;
     }
-
+    public String getEmail(){return email;}
     //setters
     public void setId(int id) {
         this.id = id;
