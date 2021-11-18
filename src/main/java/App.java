@@ -31,6 +31,8 @@ public class App {
         staticFileLocation("/public");
         Sql2oFeedbackDao feedbackDao = new Sql2oFeedbackDao(sql2o);
         Sql2oProductsDao productsDao = new Sql2oProductsDao(sql2o);
+
+
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "index.hbs");
@@ -53,6 +55,8 @@ public class App {
             res.redirect("/");
             return null;
         }, new HandlebarsTemplateEngine());
+//
+
 
 
     }
