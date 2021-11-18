@@ -51,8 +51,7 @@ public class App {
             String message = req.queryParams("message");
             Feedback newFeedback = new Feedback(name, email, message);
             feedbackDao.addFeedback(newFeedback);
-            res.redirect("/");
-            return null;
+            return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 //
 

@@ -1,0 +1,35 @@
+#heading-success{
+    color: #23353C;
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 50px;
+    line-height: 50px;
+    margin-top: 100px;
+}
+
+.add-new{
+    background-color: white;
+    border: #8CA1A4 solid 2px;
+    color: #8CA1A4;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.add-new:hover{
+    color: white;
+    background-color: #8CA1A4;
+}
+
+.success-parent-container{
+    padding-left: 170px;
+    padding-right: 170px;
+}
+
+.img-success img{
+    margin-left: 195px;
+}
+
+.buttons{
+    display: inline-flex;
+    gap: 20px;
+}
