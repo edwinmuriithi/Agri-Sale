@@ -13,7 +13,6 @@ import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 import static spark.Spark.*;
 
-
 public class App {
     static int getHerokuAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
@@ -28,10 +27,10 @@ public class App {
         String connectionString = "jdbc:postgresql://localhost:5432/agri_sale";
         Sql2o sql2o = new Sql2o(connectionString, "moringa", "Access");
         port(getHerokuAssignedPort());
+
         staticFileLocation("/public");
         Sql2oFeedbackDao feedbackDao = new Sql2oFeedbackDao(sql2o);
         Sql2oProductsDao productsDao = new Sql2oProductsDao(sql2o);
-
 
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
