@@ -11,19 +11,30 @@ mainClassName = 'App'
 
 repositories {
     mavenCentral()
+    maven {
+        url 'https://repo.clojars.org'
+        name 'Clojars'
+    }
 }
 
 dependencies {
 
     implementation 'org.sql2o.extensions:sql2o-postgres:1.6.0'
     implementation 'org.sql2o:sql2o:1.6.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    implementation "com.sparkjava:spark-core:2.6.0"
-    implementation "com.sparkjava:spark-template-handlebars:2.5.5"
-    implementation 'org.slf4j:slf4j-simple:1.7.21'
-    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.2'
-    implementation group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
+    implementation 'in.yajnesh.util:java-util:1.0.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'com.sparkjava:spark-core:2.9.3'
+    implementation 'com.sparkjava:spark-template-handlebars:2.7.1'
+    implementation 'org.slf4j:slf4j-simple:1.7.32'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.1'
+    implementation group: 'postgresql', name: 'postgresql', version: '9.3-1102.jdbc41'
+    implementation 'com.sparkjava:spark-core:2.9.3'
+    implementation 'com.sparkjava:spark-template-handlebars:2.7.1'
+    implementation 'org.sql2o:sql2o:1.6.0'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.1'
+    implementation group: 'postgresql', name: 'postgresql', version: '9.3-1102.jdbc41'
+    implementation 'com.google.code.gson:gson:2.8.9'
 
 }
 
