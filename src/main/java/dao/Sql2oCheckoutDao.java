@@ -1,6 +1,6 @@
 package dao;
-import dao.interfaces.CheckoutDao;
 import models.Checkout;
+import dao.interfaces.*;
 import models.Products;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
@@ -39,6 +39,13 @@ public class Sql2oCheckoutDao implements CheckoutDao {
                     .executeAndFetch(Products.class);
         }
     }
+//    @Override
+//    public List<Checkout> getAllCheckouts() {
+//        try(Connection con =sql2o.open()){
+//            return con.createQuery("SELECT * FROM products WHERE id=:products_id")
+//                    .executeAndFetch(Checkout.class);
+//        }
+//    }
 
     @Override
     public void clearAll() {

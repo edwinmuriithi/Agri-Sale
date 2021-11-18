@@ -1,21 +1,19 @@
 {{#partial "content"}}
+ {{#if checkoutItems}}
+        <h1>Products added To Checkout</h1>
+         {{#each products as |product|}}
+         <div class="card-title">{{products.id}}</div>
+         <div class="card-title">{{products.name}}</div>
+         <div class="card-title">{{products.category}}</div>
+         <div class="card-title">{{products.price}}</div>
+         <button class="btn btn-block btn-success p-2 font-weight-bolder text-white">Delete Product</button>
 
-    <div class="checkout">
-        <h1>Product's Added To The Cart</h1>
-        <ul class="mt-5">
-                <li >
-                    <div class="shadow p-2 bg-white">
-                        <div class="card-title">{{products.id}}</div>
-                        <hr>
-                        <div class="card-text">{{products.name}}</div>
-                        <div class="card-text">{{products.category}}</div>
-                        <div class="card-text">{{products.price}}</div>
-                        <button class="btn btn-block btn-success p-2 font-weight-bolder text-white">Delete Product</button>
-                    </div>
-                </li>
-        </ul>
-    </div>
+         {{/each}}
 
+    {{else}}
+     <p class="par"class="card-title"> Go Back To Products</p>
+
+    {{/if}}
 
 {{/partial}}
 
