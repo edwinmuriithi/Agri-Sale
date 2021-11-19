@@ -4,11 +4,6 @@ import dao.interfaces.FeedbackDao;
 import models.Feedback;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
-
-<<<<<<<<< Temporary merge branch 1
-import java.sql.Connection;
-=========
->>>>>>>>> Temporary merge branch 2
 import java.util.List;
 
 public class Sql2oFeedbackDao implements FeedbackDao {
@@ -19,18 +14,17 @@ public class Sql2oFeedbackDao implements FeedbackDao {
 
     @Override
     public List<Feedback> getAllFeedbacks() {
-        try (Connection con = sql2o.open()) {
+        try(Connection con =sql2o.open()){
             return con.createQuery("SELECT * FROM feedback")
                     .executeAndFetch(Feedback.class);
         }
     }
 
     @Override
-    public void addFeedback(Feedback feedback) {
+    public void addFeedback(Feedback feedback){
         String sql = "INSERT INTO feedback (name, email, message) VALUES(:name, :email, :message)";
-
-        try (Connection con = sql2o.open()) {
-            int id = (int) con.createQuery(sql, true)
+        try(Connection con = sql2o.open()){
+            int id = (int) con.createQuery(sql,true)
                     .bind(feedback)
                     .executeUpdate()
                     .getKey();
@@ -39,11 +33,11 @@ public class Sql2oFeedbackDao implements FeedbackDao {
     }
 
     @Override
-    public Feedback findFeedbackById(int id) {
+    public Feedback findFeedbackById(int id){
         String sql = "SELECT * FROM feedback WHERE id=:id";
-        try (Connection con = sql2o.open()) {
+        try(Connection con = sql2o.open()){
             return con.createQuery(sql)
-                    .addParameter("id", id)
+                    .addParameter("id",id)
                     .executeAndFetchFirst(Feedback.class);
         }
     }
@@ -54,8 +48,8 @@ public class Sql2oFeedbackDao implements FeedbackDao {
         try(Connection con = sql2o.open()){
             con.createQuery(sql)
                     .addParameter("name", name)
-                    .addParameter("message", message)
-                    .addParameter("id", feedback.getId())
+                    .addParameter("message",message)
+                    .addParameter("id",feedback.getId())
                     .executeUpdate();
             feedback.setName(name);
             feedback.setMessage(message);
@@ -71,8 +65,4 @@ public class Sql2oFeedbackDao implements FeedbackDao {
         }
     }
 
-<<<<<<<<< Temporary merge branch 1
 }
-=========
-}
->>>>>>>>> Temporary merge branch 2

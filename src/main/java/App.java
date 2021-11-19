@@ -59,18 +59,13 @@ public class App {
         //get a specific product
         get("/products/:id", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
-            int idOfProductToFind = Integer.parseInt(req.params("id")); //new
-            Products foundProducts = productsDao.findById(idOfProductToFind);
-            model.put("products", foundProducts);
-            return new ModelAndView(model, "category-detail.hbs"); //new
+            return new ModelAndView(model, "products.hbs");
         }, new HandlebarsTemplateEngine());
 
         //get: show a form to create a new feedback
         get("/feedback/new", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
-            List<Feedback> feedbacks = feedbackDao.getAllFeedbacks();
-            model.put("feedbacks", feedbacks);
-            return new ModelAndView(model, "feedback-form.hbs"); //new layout
+            return new ModelAndView(model, "feedback.hbs");
         }, new HandlebarsTemplateEngine());
 
         //get: checkout

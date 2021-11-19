@@ -1,20 +1,29 @@
 {{#partial "content"}}
- {{#if checkoutItems}}
+<div class = "row">
+    <div class = "col-md-6">
+    {{#if checkoutItems}}
         <h1>Products added To Checkout</h1>
-         {{#each products as |product|}}
-         <div class="card-title">{{products.id}}</div>
-         <div class="card-title">{{products.name}}</div>
-         <div class="card-title">{{products.category}}</div>
-         <div class="card-title">{{products.price}}</div>
+         {{#each checkoutItems as |checkoutItem|}}
+         <div class="card-title">{{checkoutItem.id}}</div>
+         <div class="card-title">{{checkoutItem.name}}</div>
+         <div class="card-title">{{checkoutItem.category}}</div>
+         <div class="card-title">{{checkoutItem.price}}</div>
          <button class="btn btn-block btn-success p-2 font-weight-bolder text-white">Delete Product</button>
-
          {{/each}}
-
     {{else}}
+    </div>
+    <div class = "col-md-6">
+        <div class="container mt-3">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Total price <span class="badge bg-secondary">Kes. 1217</span></h4>
+              <a href="#" class="card-link">Proceed to payment</a>
+            </div>
+          </div>
+        </div>
+    </div>
+<div/>
      <p class="par"class="card-title"> Go Back To Products</p>
-
     {{/if}}
-
 {{/partial}}
-
 {{> layout.hbs}}
