@@ -11,19 +11,31 @@
          <button class="btn btn-block btn-success p-2 font-weight-bolder text-white">Delete Product</button>
          {{/each}}
     {{else}}
-    </div>
-    <div class = "col-md-6">
-        <div class="container mt-3">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Total price <span class="badge bg-secondary">Kes. 1217</span></h4>
-              <a href="#" class="card-link">Proceed to payment</a>
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" rel="stylesheet" type="text/css" media="all">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet" type="text/css" media="all">
+    </head>
+    <div class="container-fluid mt-100">
+
+
+        <div class="row">
+            <div style="width:auto; margin:0 auto;" class="col-md-12" >
+                <div style="width:auto; margin:0 auto;" class="card">
+                    <div style="width:auto; margin:0 auto;" class="card-header">
+                        <h5>Cart</h5>
+                    </div>
+                    <div style="width:auto; margin:0 auto;" class="card-body cart">
+                        <div class="col-sm-12 empty-cart-cls text-center"> <img src="https://www.pngkit.com/png/full/829-8299026_cart-png-photos-shopping-cart-icon-png.png" width="130" height="130" class="img-fluid mb-4 mr-3">
+                            <h3><strong>Your Cart is Empty</strong></h3>
+                            <h4>Add something to make us happy :)</h4> <a href="/products" class="btn btn-primary cart-btn-transform m-3" data-abc="true">Continue Shopping</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
     </div>
-<div/>
-     <p class="par"class="card-title"> Go Back To Products</p>
     {{/if}}
 {{/partial}}
 {{> layout.hbs}}
