@@ -143,6 +143,11 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "checkout.hbs");
         }, new HandlebarsTemplateEngine());
+
+        get("/success", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 
 }
