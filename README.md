@@ -55,8 +55,6 @@ CREATE DATABASE agri_sale_test WITH TEMPLATE agri_sale;
 * HBS
 * HTML, CSS, Bootstrap
 
-## Support and contact details
-If you come across any problems you can reach me at: ronald.kibet@student.moringaschool.com
 
 ### License
 *This project is licensed under the terms of the MIT license.*
